@@ -5,5 +5,9 @@ logger.setLevel(logging.INFO)
 
 
 def lambda_handler(event, context):
-    logger.info(event)
-    return event
+    try:
+        logger.info(event)
+        return event
+    except Exception as e:
+        logger.error(e)
+        raise e
