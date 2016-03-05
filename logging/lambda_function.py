@@ -1,13 +1,15 @@
+""" Lambda Function """
 import logging
 
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
+LOGGER = logging.getLogger()
+LOGGER.setLevel(logging.INFO)
 
 
-def lambda_handler(event, context):
+def lambda_handler(event):
+    """ Lambda Handler """
     try:
-        logger.info(event)
+        LOGGER.info(event)
         return event
-    except Exception as e:
-        logger.error(e)
-        raise e
+    except Exception as exception:
+        LOGGER.error(exception)
+        raise exception
