@@ -1,15 +1,17 @@
+""" Lambda Function """
 import logging
 import base64
 
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
+LOGGER = logging.getLogger()
+LOGGER.setLevel(logging.INFO)
 
 
-def lambda_handler(event, context):
+def lambda_handler(event):
+    """ Lambda Handler """
     try:
         for record in event["Records"]:
             logger.info(base64.b64decode(record["kinesis"]["data"]))
         return event
-    except Exception as e:
-        logger.error(e)
-        raise e
+    except Exception as exception:
+        LOGGER.error(exception)
+        raise exception
