@@ -1,0 +1,22 @@
+{
+    "Records": [
+        {
+            "EventSource": "aws:sns",
+            "EventSubscriptionArn": "arn:aws:sns:ap-northeast-1:000000000000:xxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "EventVersion": "1.0",
+            "Sns": {
+                "Message": "{\"AlarmName\":\"EniCount\",\"AlarmDescription\":null,\"AWSAccountId\":\"000000000000\",\"NewStateValue\":\"OK\",\"NewStateReason\":\"Threshold Crossed: 1 datapoint (120.0) was not greater than or equal to the threshold (150.0).\",\"StateChangeTime\":\"2016-03-20T09:22:56.908+0000\",\"Region\":\"APAC - Tokyo\",\"OldStateValue\":\"ALARM\",\"Trigger\":{\"MetricName\":\"EniCount\",\"Namespace\":\"SuzLab\",\"Statistic\":\"MAXIMUM\",\"Unit\":null,\"Dimensions\":[],\"Period\":300,\"EvaluationPeriods\":1,\"ComparisonOperator\":\"GreaterThanOrEqualToThreshold\",\"Threshold\":150.0}}",
+                "MessageAttributes": {},
+                "MessageId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                "Signature": "xxxxxxxx",
+                "SignatureVersion": "1",
+                "SigningCertUrl": "https://sns.ap-northeast-1.amazonaws.com/SimpleNotificationService-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.pem",
+                "Subject": "OK: \"EniCount\" in APAC - Tokyo",
+                "Timestamp": "2016-03-20T09:22:57.028Z",
+                "TopicArn": "arn:aws:sns:ap-northeast-1:696684428640:xxxxxxxx",
+                "Type": "Notification",
+                "UnsubscribeUrl": "https://sns.ap-northeast-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:ap-northeast-1:000000000000:xxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            }
+        }
+    ]
+}
