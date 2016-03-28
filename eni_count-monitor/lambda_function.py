@@ -9,7 +9,7 @@ LOGGER.setLevel(logging.INFO)
 def lambda_handler(event, context):
     """ Lambda Handler """
     try:
-        LOGGER.info("Event: " + json.dumps(event, sort_keys=True, indent=4))
+        LOGGER.info("Event: " + event.dumps(event, sort_keys=True, indent=4))
         LOGGER.info("Context: " + str(context))
         response = boto3.client("ec2").describe_network_interfaces()
         eni_count = len(response["NetworkInterfaces"])
